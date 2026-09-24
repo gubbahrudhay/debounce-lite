@@ -1,4 +1,4 @@
-# @saihrudhay/debounce-lite
+# @gubbahrudhay/debounce-lite
 
 A small, lightweight, dependency-free debounce utility with full TypeScript support.
 
@@ -7,13 +7,13 @@ Delays invoking a function until a specified number of milliseconds have elapsed
 ## Installation
 
 ```bash
-npm install @saihrudhay/debounce-lite
+npm install @gubbahrudhay/debounce-lite
 ```
 
 ## Basic Usage
 
 ```ts
-import { debounce } from "@saihrudhay/debounce-lite";
+import { debounce } from "@gubbahrudhay/debounce-lite";
 
 const search = debounce((query: string) => {
   console.log("Searching:", query);
@@ -121,7 +121,7 @@ After the delay elapses, any trailing calls that arrived during the delay window
 `debounce-lite` ships with built-in TypeScript declarations. The debounced function preserves the parameter types of the original function.
 
 ```ts
-import { debounce, type DebouncedFunction } from "@saihrudhay/debounce-lite";
+import { debounce, type DebouncedFunction } from "@gubbahrudhay/debounce-lite";
 
 function greet(name: string, age: number): void {
   console.log(`Hello ${name}, age ${age}`);

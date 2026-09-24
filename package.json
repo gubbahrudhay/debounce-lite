@@ -1,5 +1,5 @@
 {
-  "name": "@saihrudhay/debounce-lite",
+  "name": "@gubbahrudhay/debounce-lite",
   "version": "1.0.0",
   "description": "A small, lightweight, dependency-free debounce utility with TypeScript support.",
   "type": "module",
