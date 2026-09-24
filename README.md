@@ -160,6 +160,45 @@ Debouncing works by wrapping a function in a timer:
 
 This effectively collapses many rapid calls into a single execution, using only the last set of arguments.
 
+## Limitations
+
+- **No `maxWait` option** — unlike Lodash's debounce, this package does not support a maximum wait time that guarantees execution after a certain period. If calls keep arriving, the function will keep being deferred indefinitely.
+- **No return value** — the debounced function returns `void`. If your original function returns a value (or a Promise), you cannot access it through the debounced wrapper. Use `.flush()` as a workaround for synchronous execution when needed.
+- **ESM only** — this package ships as ES modules. CommonJS (`require()`) is not supported. If you need CJS, use a bundler or dynamic `import()`.
+- **No `trailing` option** — trailing-edge execution is always enabled. The `leading` option adds leading-edge execution but does not disable trailing when subsequent calls arrive during the delay.
+
+## Contributing
+
+Contributions are welcome! Here's how to get started:
+
+1. **Fork** the repository on GitHub
+2. **Clone** your fork locally:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/debounce-lite.git
+   cd debounce-lite
+   ```
+3. **Install** dependencies:
+   ```bash
+   npm install
+   ```
+4. **Make your changes** in the `src/` directory
+5. **Run tests** to make sure everything passes:
+   ```bash
+   npm test
+   ```
+6. **Build** to verify TypeScript compilation:
+   ```bash
+   npm run build
+   ```
+7. **Submit a pull request** with a clear description of what you changed and why
+
+### Guidelines
+
+- Write tests for any new functionality
+- Keep the implementation small and focused
+- Use TypeScript strict mode (no `any`)
+- Update the README if you change or add public API methods
+
 ## License
 
 [MIT](./LICENSE)
