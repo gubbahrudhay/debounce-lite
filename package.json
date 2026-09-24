@@ -1,0 +1,54 @@
+{
+  "name": "@saihrudhay/debounce-lite",
+  "version": "1.0.0",
+  "description": "A small, lightweight, dependency-free debounce utility with TypeScript support.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build && npm test",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "debounce",
+    "throttle",
+    "delay",
+    "timer",
+    "utility",
+    "typescript",
+    "lightweight",
+    "zero-dependencies"
+  ],
+  "author": "Sai Hrudhay Gubba",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gubbahrudhay/debounce-lite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gubbahrudhay/debounce-lite/issues"
+  },
+  "homepage": "https://github.com/gubbahrudhay/debounce-lite#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "sideEffects": false
+}
